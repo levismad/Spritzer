@@ -1,13 +1,12 @@
 # Spritzer
 My point o view of the Spritzer library (original from [@luisivan](https://github.com/luisivan/spritzer))  & read more about Spritz at [http://learn2spritz.com/](http://learn2spritz.com/)
 
-View [Live Demo](https://long-bat.hyperdev.space/)
-
+View [Live Demo] of Version 0.2.0 (https://long-bat.hyperdev.space/)
 
 Version with a pause/back button , and accelerometer. 
 
 ``` html
-<script src="jquery.js"></script>
+<script src="<cdn>/jquery.min.js"></script>
 <script src="Spritzer.jquery.js"></script>
 ```
 
@@ -16,13 +15,10 @@ Version with a pause/back button , and accelerometer.
 ```
 
 ``` javascript
-var wordsPerMinute = 450;
-	var text = document.getElementsByTagName('text')[0].innerHTML;	
+	var wordsPerMinute = 450;
+	var text = ["paragraph 1", "paragraph 2"];	
 	var h1 = document.querySelector("#mydiv").appendChild(document.createElement('h1'));
 	$(h1).Spritzer({wpm: wordsPerMinute, text: text});
-	// debugger;
-	// var output = new Spritzer(h1);
-	// output.render(text, wordsPerMinute);
 	$(document).on("click","#Voltar", function(){
 		$(h1).data("Spritzer").backOneParagraph();
 	});
